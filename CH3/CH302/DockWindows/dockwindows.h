@@ -6,7 +6,7 @@
 class DockWindows : public QMainWindow
 {
     Q_OBJECT
-    
+
 public:
     DockWindows(QWidget *parent = 0);
     ~DockWindows();

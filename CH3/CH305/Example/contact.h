@@ -1,4 +1,7 @@
-//添加的头文件
+#ifndef CONTACT_H
+#define CONTACT_H
+
+#include <QWidget>
 #include <QLabel>
 #include <QGridLayout>
 #include <QLineEdit>
@@ -7,7 +10,11 @@ class Contact : public QWidget
 {
     Q_OBJECT
 public:
-    Contact(QWidget *parent=0);
+    explicit Contact(QWidget *parent = 0);
+
+signals:
+
+public slots:
 private:
     QLabel *EmailLabel;
     QLineEdit *EmailLineEdit;
@@ -23,3 +30,4 @@ private:
     QGridLayout *mainLayout;
 };
 
+#endif // CONTACT_H

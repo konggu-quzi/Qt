@@ -1,6 +1,8 @@
+#include <QCoreApplication>
 #include <QDebug>
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
+    QCoreApplication a(argc, argv);
     QList<int> list;
     QMutableListIterator<int> i(list);
     for(int j=0;j<10;++j)
@@ -16,5 +18,5 @@ int main(int argc,char *argv[])
     }
     for(i.toFront();i.hasNext();)
         qDebug()<<i.next();
-    return 0;
+    return a.exec();
 }

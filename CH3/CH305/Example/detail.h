@@ -1,4 +1,7 @@
-//添加的头文件
+#ifndef DETAIL_H
+#define DETAIL_H
+
+#include <QWidget>
 #include <QLabel>
 #include <QComboBox>
 #include <QLineEdit>
@@ -8,7 +11,11 @@ class Detail : public QWidget
 {
     Q_OBJECT
 public:
-    Detail(QWidget *parent=0);
+    explicit Detail(QWidget *parent = 0);
+
+signals:
+
+public slots:
 private:
     QLabel *NationalLabel;
     QComboBox *NationalComboBox;
@@ -21,3 +28,4 @@ private:
     QGridLayout *mainLayout;
 };
 
+#endif // DETAIL_H

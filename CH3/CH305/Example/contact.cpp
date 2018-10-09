@@ -1,24 +1,18 @@
 #include "contact.h"
 
-Contact::Contact(QWidget *parent) :
-    QWidget(parent)
+Contact::Contact(QWidget *parent) : QWidget(parent)
 {
     EmailLabel =new QLabel(tr("电子邮件："));
     EmailLineEdit =new QLineEdit;
-
     AddrLabel =new QLabel(tr("联系地址："));
     AddrLineEdit =new QLineEdit;
-
     CodeLabel =new QLabel(tr("邮政编码："));
     CodeLineEdit =new QLineEdit;
-
     MoviTelLabel =new QLabel(tr("移动电话："));
     MoviTelLineEdit =new QLineEdit;
     MoviTelCheckBook =new QCheckBox(tr("接收留言"));
-
     ProTelLabel =new QLabel(tr("办公电话："));
     ProTelLineEdit =new QLineEdit;
-
     mainLayout =new QGridLayout(this);
     mainLayout->setMargin(15);
     mainLayout->setSpacing(10);

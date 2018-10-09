@@ -15,14 +15,8 @@ Dialog::Dialog(QWidget *parent)
     mainLayout->addWidget(lineEdit,0,1);
     mainLayout->addWidget(label2,1,0);
     mainLayout->addWidget(button,1,1);
-    setLayout(mainLayout);
     //connect(button,SIGNAL(clicked()),this,SLOT(showArea()));
     connect(lineEdit,SIGNAL(textChanged(QString)),this,SLOT(showArea()));
-}
-
-Dialog::~Dialog()
-{
-
 }
 
 void Dialog::showArea()
@@ -33,4 +27,9 @@ void Dialog::showArea()
     int valueInt=valueStr.toInt(&ok);
     double area=valueInt*valueInt*PI;
     label2->setText(tempStr.setNum(area));
+}
+
+Dialog::~Dialog()
+{
+
 }

@@ -10,17 +10,17 @@ class Widget;
 class Widget : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
     void init();
     void updateParentItem(QTreeWidgetItem* item);
+public slots:
+    void treeItemChanged(QTreeWidgetItem* item, int column);
 
 private:
     Ui::Widget *ui;
-public slots:
-    void treeItemChanged(QTreeWidgetItem* item, int column);
 };
 
 #endif // WIDGET_H
